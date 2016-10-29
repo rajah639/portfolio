@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="eng">
+<link rel="stylesheet" type="text/css" href="main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script>
+//$('nav-btns > li > a') if you change your class in html change nav-btns to your class
+  $(document).ready(function() {
+    $('.nav-btns > li > a').click(function(event){
+    event.preventDefault();//stop browser to take action for clicked anchor
+
+    //get displaying tab content jQuery selector
+    //change nav-btns if you change your class in html
+    var active_tab_selector = $('.nav-btns > li.active > a').attr('href');
+
+    //find actived navigation and remove 'active' css
+    //change nav-btns if you change your class in html
+    var actived_nav = $('.nav-btns > li.active');
+    actived_nav.removeClass('active');
+
+    //add 'active' css into clicked navigation
+    $(this).parents('li').addClass('active');
+
+    //hide displaying tab content
+    $(active_tab_selector).removeClass('active');
+    $(active_tab_selector).addClass('hide');
+
+    //show target tab content
+    var target_tab_selector = $(this).attr('href');
+    $(target_tab_selector).removeClass('hide');
+    $(target_tab_selector).addClass('active');
+       });
+    });
+</script>
+
+
+
+<body class="bg">
+        <nav>
+          <header>
+            <h1 class="brand">Rj</h1>
+            <!-- nav-btns is linked in jquery to hide and activate when
+          clicking each link. class active is what gets moved around injquery
+        feel free to change the class here but make sure to change jquery codes-->
+              <ul class="nav-btns">
+                <li class="nav-btn1 active"><a href="#home" name="#home">Home</a></li>
+                <li class="nav-btn2"><a href="#AboutMe" name="#AboutMe">About me</a></li>
+                <li class="nav-btn3"><a href="#Contact" name="#Contact">Contact me</a></li>
+              </ul>
+          </header>
+        </nav>
+
+        <section id="home" class="tab-content active">
+          <div>
+            <h2 class="heading">Welcome to Rajahs Portfolio!</h2>
+            <p class="para">Hello!<br/>
+            Fancy seeing <strong><em class="italic bold">YOU</em></strong> here. :)
+            You're probably on here cause you saw something sexy about this site. (AmIrite?)
+            Well thank you for stopping by here and now let me describe who I am.</p>
+            <p>Don't get lost in the maize.</p>
+          </div>
+        </section>
+
+        <section id="AboutMe" class="tab-content hide">
+          <div>
+            <h2 class="heading">My name is Richard Jeane</h2>
+            <p class="para">But you can call me Rajah639 or Ricky. Was born in the winter of 1990 which would make me
+            26 at the time of writing this. </p>
+            <p class="para"><strong>A little about myself</strong>; Well lets see, lets tell you about the teen years, I promise it will be brief.
+            It was the winter of 2002 or so, a friend of mine had a pc and I used to sneak out every night just to get on for the night
+            to play a video game. One night the parents found out and as upset as they were, with their help I had a pc of my own.
+            Thus the begining of a beautiful relation started. Many nights went by, playing this game then eventually onto another well known
+            pc game and my skills on the pc got sharper, finally I got curious into coding, websites, and just everything that made the
+            computer go.</p>
+            <p class="para">At the time of early adulthood, I started out on my own in a long string of jobs that made me personally saddend.
+            From small construction jobs to retail jobs and just about everything else inbetween, as well as factory jobs, I switched
+            over to focusing my time and efforts into studying, learn, practice and then ultimately help others learn to web design and develop
+            with the tools that are at theirs (and mine) disposal.</p>
+            <p class="para"> So now you know a little about my past and what has lead up to today. Perhaps I should explain current goals, challenges
+             and skills.
+             As we can see here; <strong class="bold">HTML</strong>, and <strong class="bold">CSS</strong> both are in use looking at this page; being aware of what each element can and can not do
+             I can easily manipulate these boxes to provide an enjoyable expereience for you the viewer.
+             For challenges; lets say it's more of a learning curve, as I am taking every day to practice and understand the fundamentals
+             of <strong class="bold">JavaScript</strong>, and from there I would love to have a grasp of <strong class="bold">Modular JS</strong> and <strong class="bold">jQuery</strong> and progress from there on what ever
+             team accepts me.</p>
+           </div>
+        </section>
+
+        <footer>
+          <section id="Contact" class="tab-content hide">
+            <div>
+              <h3 class="heading">This is where you can reach me.</h3>
+              <p class="para"> I have a plethora of places you can contact me and see my work.
+            Primarily I use twitter but you can also follow my work on CodePen.com.</p>
+              <ul class="links">
+                  <li class="link1"><a href="http://www.twitter.com/rajah639"><img src="https://www.seoclerk.com/pics/trade3259-1qKqMy1431507808.png" class="twitter">Twitter</a></li>
+                  <li class="link2"><a href="https://codepen.io/rajah639/"><img src="http://cdn.embed.ly/providers/logos/codepen.png" class="codepen">CodePen</a></li>
+                  <li class="link3"><a href="https://github.com/rajah639"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" class="github">GitHub</a></li>
+              </ul>
+            </div>
+          </section>
+        </footer>
+</body>

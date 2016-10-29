@@ -1,0 +1,126 @@
+html {
+  background-image: url(https://bootstrapbay.com/blog/wp-content/uploads/2014/05/unslpash-desert-road_uvsq5s.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+header {
+  background-color:rgba(255,255,255,.1)
+
+}
+
+h1 {
+ font-size: 80px;
+ font-family: 'Petit Formal Script', cursive;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: bold;
+  position: absolute;
+  top:  50px;
+  right: 15px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #232b38;
+}
+
+a:hover {
+  color: #777777;
+}
+
+a:visited {
+  color: #d9dce0;
+}
+
+/* This is to hide or activate the specific section*/
+.tab-content.active{
+  display: block;
+}
+
+.tab-content.hide{
+  display: none;
+}
+
+.nav-tabs:before,
+.nav-tabs:after {
+  display: table;
+  content: "";
+}
+
+.nav-tabs:after {
+  clear: both;
+}
+/* end of hiding and activating our sections*/
+
+.nav-btn1 {
+margin-top: 5px;
+}
+
+.nav-btn2 {
+  margin-top: 18px;
+}
+
+.nav-btn3 {
+  margin-top: 20px;
+}
+
+div {
+  text-align: center;
+  text-shadow: 2px 2px 9px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: 'Petit Formal Script', cursive;
+}
+
+.para {
+  text-indent: 13px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*There are 3 sections*/
+section:not(#AboutMe) {
+  background-color:rgba(255,255,255,.55);
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border-radius: 10px
+}
+/*Id for the about me section, it was to big
+to keep on a no scroll page
+So I seperated the css code.*/
+#AboutMe {
+  background-color:rgba(255,255,255,.55);
+  width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border-radius: 10px
+}
+
+/*Footers social media links*/
+
+.links {
+  position: relative;
+  top: -25px;
+  float: left;
+}
+
+img {
+  width: 3.5%;
+  height: auto;
+}
+
+.links > li > a:visited {
+  color: black;
+}
