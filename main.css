@@ -1,9 +1,14 @@
 html {
   background-image: url(https://bootstrapbay.com/blog/wp-content/uploads/2014/05/unslpash-desert-road_uvsq5s.png);
   background-position: center;
-  background-size: cover;
+  background-size: cover, contain;
   background-repeat: no-repeat;
-  height: 100%;
+  background-attachment: fixed;
+
+}
+
+body {
+
 }
 
 header {
@@ -74,8 +79,9 @@ margin-top: 5px;
 div {
   text-align: center;
   text-shadow: 2px 2px 9px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  position: relative;
 }
 
 .heading {
@@ -101,7 +107,6 @@ to keep on a no scroll page
 So I seperated the css code.*/
 #AboutMe {
   background-color:rgba(255,255,255,.55);
-  width: 70em;
   margin-left: auto;
   margin-right: auto;
   height: auto;
